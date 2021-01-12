@@ -4,7 +4,7 @@
 <%@ include file="../layout/header.jsp"%>
 
 <div class="container">
-	<form action="/blog/user?cmd=join" method="post" onsubmit="return valid()">
+	<form action="/blogtest/user?cmd=join" method="post" onsubmit="return valid()">
 		<div class="d-flex justify-content-end">
 			<button type="button" class="btn btn-info" onClick="usernameCheck()">중복체크</button>
 		</div>
@@ -46,7 +46,7 @@
 
 		$.ajax({
 			type: "POST",
-			url: "/blog/user?cmd=usernameCheck",
+			url: "/blogtest/user?cmd=usernameCheck",
 			data: username,
 			contentType: "text/plain; charset=utf-8",
 			dataType: "text"  // 응답 받을 데이터의 타입을 적으면 자바스크립트 오브젝트로 파싱해줌.

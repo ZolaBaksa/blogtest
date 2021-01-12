@@ -8,7 +8,7 @@
 <!-- 필터에 .jsp로 접근하는 모든 접근을 막아버리면 됨. -->
 
 <div class="container">
-	<form action="/blog/board?cmd=update" method="POST">
+	<form action="/blogtest/board?cmd=update" method="POST">
 		<input type="hidden" name="id" value="${dto.id}" />
 		<div class="form-group">
 			<label for="title">Title:</label>

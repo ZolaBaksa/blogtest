@@ -5,7 +5,7 @@
 
 <!-- x-www-form-urlencoded -->
 <div class="container">
-	<form action="/blog/user?cmd=login" method="post" >
+	<form action="/blogtest/user?cmd=login" method="post" >
 		<div class="form-group">
 			<input type="text" name="username" id="username"  class="form-control" placeholder="Enter Username"  required/>
 		</div>

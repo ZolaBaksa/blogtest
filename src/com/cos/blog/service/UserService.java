@@ -1,16 +1,12 @@
 package com.cos.blog.service;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.util.List;
 
-import com.cos.blog.config.DB;
 import com.cos.blog.domain.user.User;
 import com.cos.blog.domain.user.UserDao;
 import com.cos.blog.domain.user.dto.JoinReqDto;
 import com.cos.blog.domain.user.dto.LoginReqDto;
 import com.cos.blog.domain.user.dto.UpdateReqDto;
-import com.mysql.cj.xdevapi.PreparableStatement;
 
 public class UserService {
 
@@ -37,5 +33,11 @@ public class UserService {
 	public int 유저네임중복체크(String username) {
 		int result = userDao.findByUsername(username);
 		return result;
+	}
+	public List<User> 목록보기(){
+		return userDao.findAll();
+	}
+	public int 유저삭제(int id) {
+		return userDao.deleteById(id);
 	}
 }
